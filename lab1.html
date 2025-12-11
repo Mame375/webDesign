@@ -4,10 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Web Page</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header{
+      background: #4caf50;
+      padding: 15px 20px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav{
+      background: #333;
+      padding: 10px;
+    }
+    nav a{
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    nav a:hover{
+      background: #4caf50;
+      border-radius: 5px;
+    }
+
+    section{
+      padding: 25px;
+    }
+    footer{
+      background: #222;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is my first web page using HTML!</p>
-  <a href="https://www.example.com">Visit Example</a>
+
+  <header>Welcome to My Web page</header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h1>Hello Visitor! 👋</h1>
+    <p>This is my first enhanced web page using HTML & CSS.</p>
+    <p>Click below to visit Google site:</p>
+    <a href="https://www.google.com" target="_blank">Visit Google</a>
+    <p>Click below to visit Youtube site:</p>
+    <a href="https://www.youtube.com" target="_blank">Visit Youtube</a>
+  </section>
+
+  <footer>
+    © 2025 My Website — All Rights Reserved.
+  </footer>
+
 </body>
 </html>
