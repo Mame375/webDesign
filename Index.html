@@ -3,145 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile Website</title>
+  <title>Mohammed Usman | Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
-
- * {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f5f6fa;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 20px auto;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  backgroung-color: white;
-}
-
-header {
-  align-items: center;
-  background-color: lightseagreen;
-  color: white;
-  padding: 15px 20px;
-  overflow: hidden;
-}
-
-.logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  margin-right: 20px;
-  border: 2px solid cyan;
-  float: left;
-  object-fit: cover;
-}
- .info {
-      float: left;
+    body{
+      background-color:#e9f0f3;
+      font-family:Arial, sans-serif;
     }
 
-.info h1 {
-  font-size: 20px;
-}
+    .profile-image{
+      width:80px;
+      height:80px;
+      border-radius:50%;
+      border:3px solid #00eaff;
+      object-fit:cover;
+    }
 
-.info p {
-  font-size: 16px;
-}
+    .sidebar a{
+      font-weight:600;
+      color:#0077b6;
+    }
 
-.main {
-  overflow: hidden; 
-}
+    .sidebar a:hover{
+      color:#ff004c;
+      transition:0.3s;
+    }
 
-.sidebar {
-  float: left;
-  width: 25%;
-  background: #b3c0c2;
-  padding: 20px;
-  border-right: 1px solid #ccc;
-}
-
-.sidebar h2 {
-  margin-bottom: 10px;
-  margin-top: 5px;
-  margin-right: 0px;
-  color: #2c3e50;
-  font-size: 20px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 10px 0;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #2980b9;
-  font-weight: bold;
-}
-
-.sidebar ul li a:hover {
-  text-decoration: underline red;
-}
-
-.profile {
-  float: left;
-  width: 75%;
-  padding: 20px;
-}
-
-.profile h2 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
+    .profile-section{
+      background:#ffffff;
+      border-radius:8px;
+      padding:25px;
+      box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+    }
+     .social-icons i{
+      font-size:28px;
+      margin-right:12px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .social-icons i:hover{
+      transform:scale(1.3);
+      color:var(--hover);
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <header>
-      <img src="photo_2025-10-27_23-22-36.jpg" alt="Profile Picture" class="logo">
-      <div class="info">
-        <h1>Mohammed usman</h1>
-        <p>ID: 0584/16</p>
+<div class="container-fluid p-3">
+  <header class="d-flex align-items-center bg-teal text-white p-3 rounded" style="background:#009688;">
+      <img src="images/My profile-photo.jpg" class="profile-image me-3" alt="Profile Photo">
+      <div>
+        <h2 class="m-0 fw-bold">Mohammed Usman</h2>
+        <p class="m-0">ID : 0584/16</p>
       </div>
-    </header>
+  </header>
 
-  
-    <div class="main">
-      <nav class="sidebar">
-        <h2>Web Design Assignments</h2>
-        <ul>
-          <li><a href="lab1.html">lab1</a></li>
-          <li><a href="lab2.html">lab2</a></li>
-          <li><a href="lab3.html">lab3</a></li>
-          <li><a href="Assignment.html">Assignment1</a></li>
-          <li><a href="lab4.html">lab4</a></li>
+  <div class="row mt-4">
+
+    <nav class="col-md-3 col-12 mb-3 sidebar">
+      <div class="bg-light p-3 rounded shadow-sm">
+        <h4 class="text-dark fw-bold text-center mb-3">Web Design Assignments</h4>
+        <ul class="list-unstyled">
+          <li><a href="Lab1.html">Lab 1</a></li>
+          <li><a href="Lab2.html">Lab 2</a></li>
+          <li><a href="Lab3.html">Lab 3</a></li>
+          <li><a href="Lab4.html">Lab 4</a></li>
+          <li><a href="Assignment1.html">Assignment 1</a></li>
+          <li><a href="Bootstrap.html">Bootstrap-project</a></li>
+          <li><a href="cookie1.html">javaScript-Cookie</a></li>
         </ul>
-      </nav>
+      </div>
+    </nav>
 
-      <section class="profile">
-        <h2>About me</h2>
-        <p>Welcome to my website!<br>
-         I'm Mohammed usman 3rd year software engnnering student,I passionate coding</p>
-      </section>
-    </div>
+    <section class="col-md-9 col-12 profile-section">
+      <h3 class="text-dark fw-bold mb-3">About Me</h3>
+      <p> 
+        Welcome to my web page!<br> I'm <b>Mohammed Usman</b>, currently a 3rd-year Software Engineering student at Wolkite University.
+        I have a strong passion for programming and coding.
+        My goal is to grow as a <b>front-end developer</b> and explore the field of <b>cyber security</b>.
+      </p>
+
+      <hr>
+
+      <h5 class="fw-bold">Connect With Me</h5>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-telegram"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+       </div>
+          <br>
+      <p class="text-secondary">Thank you for visiting my web page.</p>
+      <hr>
+
+    </section>
+
   </div>
-
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
