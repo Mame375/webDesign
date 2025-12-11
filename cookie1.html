@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h3 {
+      text-align: center;
+      color : black;
+      font-size: 30px;
+      font-family: Times New Roman;
+      font-style: italic;
+      margin-top: 0;
+      margin-bottom: auto;
+    }
+    .login-box {
+      background: #06d1ec;
+      padding: 25px;
+      width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 15px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .welcome {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+   .input-group {
+      position: relative;
+      margin: 8px 0;
+      margin-right: 20px;
+    }
+    .input-username {
+      margin: 8px 0;
+      margin-right: 20px;
+    }
+   .eye {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 15px;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="login-box" id="loginBox">
+  <h3>Login</h3>
+  <div class="input-username"> 
+    <input type="text" id="username" placeholder="Username">
+  </div>
+
+  <div class="input-group">
+    <input type="password" id="password" placeholder="Password">
+    <span class="eye" onclick="togglePassword()">👁️</span>
+  </div>
+
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="login-box" id="welcomeBox" style="display:none;">
+  <div class="welcome" id="welcomeMsg"></div>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+  function setCookie(name, value, days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24*60*60*1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+  }
+
+  function getCookie(name) {
+    let cookies = document.cookie.split("; ");
+    for (let c of cookies) {
+      let [key, val] = c.split("=");
+      if (key === name) return val;
+    }
+    return null;
+  }
+
+  function deleteCookie(name) {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+  }
+
+  function login() {
+    let user = document.getElementById("username").value.trim();
+    let pass = document.getElementById("password").value.trim();
+
+    if (user === "admin" && pass === "1234") {
+      setCookie("loggedUser", user, 7);
+      showWelcome(user);
+    } else {
+      alert("Incorrect username or password");
+    }
+  }
+
+  function showWelcome(user) {
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("welcomeBox").style.display = "block";
+    document.getElementById("welcomeMsg").innerText = "Welcome, " + user + "!";
+  }
+
+  function logout() {
+    deleteCookie("loggedUser");
+    location.reload();
+  }
+
+function togglePassword() {
+    let passField = document.getElementById("password");
+    passField.type = passField.type === "password" ? "text" : "password";
+  }
+
+  window.onload = () => {
+    let savedUser = getCookie("loggedUser");
+    if (savedUser) {
+      showWelcome(savedUser);
+    }
+  };
+</script>
+
+</body>
+</html>

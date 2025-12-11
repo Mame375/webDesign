@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Usman | Portfolio</title>
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f1f3f5;
+            }
+
+        header {
+            background: #0d6efd;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            }
+
+        header h1 { 
+            font-size: 42px; font-weight: 700;
+             }
+
+        nav a:hover {
+             color: #0d6efd !important;
+             }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0d6efd;
+            text-align: center;
+            margin-bottom: 20px;
+               }
+
+        footer {
+            background: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+             }
+
+        #projects .card {
+             transition:.3s; cursor:pointer;
+            }
+
+        #projects .card:hover {
+         transform:scale(1.05);
+             }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><b>Hello, I'm <span class="text-warning">Mohammed Usman</span></b></h1>
+    <p><i>Software Engineering Student | Future Software Developer</i></p>
+    <a href="#contact" class="btn btn-warning px-4 mt-3">Hire Me</a>
+</header>
+
+<nav class="navbar navbar-expand-lg bg-light shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Portfolio</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="#about" class="nav-link fw-bold">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link fw-bold">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link fw-bold">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link fw-bold">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="about" class="container mt-5">
+    <h2 class="section-title">About Me</h2>
+    <div class="row align-items-center">
+      <div class="col-md-7">
+          <p>Hello, my name is <strong>Mohammed Usman</strong>. I am currently a university student studying Software Engineering.
+             I have foundational knowledge in HTML and CSS, and I am passionate about expanding my skills to become a full-stack developer. 
+             With determination, consistent learning, and hands-on practice,
+             I believe I can build impactful software solutions and grow as a professional developer.</p>
+
+          <p>My short-term goal is to become a skilled Front-end Developer, 
+             and my long-term ambition is to advance towards full-stack development—creating responsive,
+             user-friendly, and meaningful digital products.</p>
+
+            <a href="https://github.com" target="_blank" class="btn btn-primary mt-2">Visit My GitHub</a>
+      </div>
+
+        <div class="col-md-5 text-center">
+            <img src="images/Mame.jpg" class="img-fluid rounded-circle border" alt="profile">
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="container mt-5">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Technical Skills</h4>
+            <ul class="list-group">
+                <li class="list-group-item">HTML Web Development</li>
+                <li class="list-group-item">CSS Styling & Responsive Design</li>
+                <li class="list-group-item">Problem Solving</li>
+                <li class="list-group-item">Software Engineering Concepts</li>
+            </ul>
+        </div>
+
+<div class="col-md-6">
+            <h4>Steps to Learn Development</h4>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Start with HTML Basics</li>
+                <li class="list-group-item">Learn CSS Layout & Styling</li>
+                <li class="list-group-item">Build Projects Weekly</li>
+                <li class="list-group-item">Learn JavaScript Next</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="container mt-5"> 
+  <div class="container"> 
+    <h2 class="section-title">My Projects</h2> 
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Portfolio Website</h5>
+                    <p class="card-text">HTML + CSS personal webpage built from scratch.</p>
+                    <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Login Form UI</h5>
+                    <p class="card-text">Responsive login page using form & inputs.</p>
+                    <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Student Registration Form</h5>
+                    <p class="card-text">Form project using labels, input fields and validation.</p>
+                    <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="contact" class="container mt-5 mb-5">
+    <h2 class="section-title">Contact Me</h2>
+
+    <form class="p-4 shadow rounded bg-white mx-auto" style="max-width:600px;">
+        <label class="fw-bold">Name:</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter full name" required>
+
+        <label class="fw-bold">Email:</label>
+        <input type="email" class="form-control mb-3" placeholder="Enter email address" required>
+
+        <label class="fw-bold">Message:</label>
+        <textarea rows="5" class="form-control mb-3" placeholder="Write your message"></textarea>
+
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+    </form>
+</section>
+
+
+<footer>
+    © 2025 Mohammed Usman personal Portfolio Website — All Rights Reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
